@@ -9,6 +9,11 @@ $(document).ready(function(){
     console.log(destination);
      var apiString = 'http://api.openweathermap.org/data/2.5/weather?q=';
      console.log(apiString);
-
+     $.get(apiString + destination, function(data){
+      // sending get request to the api address appended with city name var
+      $('#city-weather').text(data.weather[0].description);
+      // seach returned data for the weather key, search the weather array/hash/thing for description and render that data in the div id=city-weather
+      console.log(data.weather[0].description);
+     });
   });
 });
