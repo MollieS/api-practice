@@ -7,7 +7,8 @@ $(document).ready(function(){
     var destination = $('input[name=cityname]').val();
     // val() is the jquery function for interacting with forms
     console.log(destination);
-
+     var apiString = 'http://api.openweathermap.org/data/2.5/weather?q=';
+     console.log(apiString);
 
   });
 });
